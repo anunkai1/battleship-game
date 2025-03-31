@@ -1,0 +1,42 @@
+/* styles.css */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.game {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.player-board, .opponent-board {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-gap: 1px;
+    background: #ccc;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background: #eee;
+}
+
+.hit {
+    background: red;
+}
+
+.miss {
+    background: blue;
+}
+.ship {
+    background: gray;
+}
