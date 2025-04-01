@@ -1,19 +1,39 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Battleship Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Battleship</h1>
-        <div class="game">
-            <div class="player-board" id="playerBoard"></div>
-            <div class="opponent-board" id="opponentBoard"></div>
+    <h1>Battleship</h1>
+    <div id="game">
+        <div id="shipSelection">
+            <h3>Ships to Place (Pick Orientation)</h3>
+            <div id="shipsContainer"></div>
         </div>
-        <div id="status">Waiting for opponent...</div>
+        <div id="boards">
+            <div>
+                <h2>Your Board</h2>
+                <div id="playerBoard" class="board"></div>
+            </div>
+            <div>
+                <h2>Opponent's Board</h2>
+                <div id="opponentBoard" class="board"></div>
+            </div>
+        </div>
+        <div id="chat">
+            <h3>Chat</h3>
+            <div id="chatMessages" style="height: 100px; overflow-y: auto; border: 1px solid #ccc; padding: 5px;"></div>
+            <input id="chatInput" type="text" placeholder="Type a message..." style="width: 200px; margin-top: 5px;">
+            <button id="sendChatBtn">Send</button>
+        </div>
+        <p id="status">Click Start Game to begin!</p>
         <button id="startBtn">Start Game</button>
+        <audio id="hitSound" src="sounds/hit.mp3"></audio>
+        <audio id="missSound" src="sounds/miss.mp3"></audio>
+        <audio id="winSound" src="sounds/win.mp3"></audio>
     </div>
     <script src="game.js"></script>
 </body>
